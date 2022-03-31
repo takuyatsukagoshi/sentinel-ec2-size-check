@@ -7,7 +7,6 @@ allowed_instance_types = [
   "t2.small",
 ]
 
-apt install -y awscli
 aws_ec2_instances = filter tfplan.resource_changes as _, resource_changes {
     resource_changes.type is "aws_instance"
 }
